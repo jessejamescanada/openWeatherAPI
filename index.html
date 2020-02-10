@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="displayContainer">
+      <h1 id="location">title</h1>
+        <h3 id="weather-description">partly stormy</h3>
+        <img id="img-icon">
+        <h3 id="temperature">temper</h3>
+        <ul class="weatherList" id="weatherList">
+          <li class="weather-list" id="feelsLike">fdsdfsdf</li>
+          <li class="weather-list" id="humidity">dsdfs</li>
+          <li class="weather-list" id="wind">dfdsd</li>
+        </ul>
+    </div>
+    <button class="btn" id="changeLocBTN">Change Location</button>
+  </div>
+
+  <div class="modal">
+    <div id="changeLocation" class="modal-content">
+      <h1 class="changeH1">Choose Location</h1>
+      <p class="modalPara">X</p>
+      <label for="modal">City:</label>
+      <div class="error">Please enter a city</div>
+      <input type="text" id="modalInput" placeholder="Enter a city...">
+      <button class="btn" id="modalBTN">Change Location</button>
+    </div>
+  </div>
+  
+
+
+
+  <script src="storage.js"></script>
+  <script src="weather.js"></script>
+  <script src="UI.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

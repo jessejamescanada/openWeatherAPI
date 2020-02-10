@@ -1,0 +1,194 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+
+
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 450px;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+.displayContainer{
+  background-image: linear-gradient(to bottom, #85b6ff, #77afff, #67a8ff, #55a2ff, #3f9bff);
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,.24);
+
+
+}
+
+#location{
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  color: white;
+  margin: 0;
+}
+
+#weather-description{
+  margin: 5px;
+  text-transform: capitalize;
+}
+
+#img-icon{
+
+}
+
+#temperature{
+margin-top: 0;
+color: white;
+}
+
+.weatherList{
+border-radius: 5px;
+background-color: #fff;
+width: 80%;
+padding: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+
+.weather-list{
+  /* display: flex;
+  flex-direction: column; */
+  /* justify-content: center;
+  align-items: center; */
+list-style-type: none;
+border-bottom: 1px dotted #555;
+width: 100%;
+text-align: center;
+padding: 8px;
+}
+
+.weather-list:last-child{
+  border-bottom: none;
+}
+
+.btn{
+  margin: 10px;
+  padding: 15px 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  letter-spacing: .6px;
+  color:#fff;
+  background-color: rgba(95, 178, 255, 0.945);
+  box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,.24);
+}
+
+.btn:focus{
+  outline: 0;
+  position: relative;
+  animation-name: btnAnimate;
+  animation-duration: .1s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes btnAnimate{
+  0% {left:0px; top:0px;}
+  50%{left: 2px; top: 2px;}
+  100%{left: 0px; top: 0px;}
+}
+
+/* modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background: rgba(0,0,0, 0.5);
+}
+
+.modal-content{
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  text-align: center;
+  margin: 10% auto;
+  position: relative;
+  width: 350px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.2), 0 7px 20px rgba(0, 0, 0, 0.17);
+  animation-name: modalOpen;
+  animation-duration: 1s;
+}
+
+.modalPara{
+  position: absolute;
+  right: 6px;
+  top: -20px;
+  z-index: 1000;
+  cursor: pointer;
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+.modal-content h1{
+  margin-bottom: 1rem;
+  border-bottom: 1px dotted #555;
+  width: 100%;
+}
+
+.modal-content label{
+  display: block;
+  text-align: left;
+  letter-spacing: 1px;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.modal-content #modalInput{
+  display: block;
+  padding: 8px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  border-color: rgba(0,0,0,0.1);
+  width: 100%;
+  font-size: 16PX;
+
+}
+
+#modalBTN{
+  margin: auto;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+}
+
+@keyframes modalOpen{
+  from{
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.error{
+  display: none;
+  color: red;
+}
