@@ -147,7 +147,8 @@ padding: 8px;
 }
 
 .modal-content h1{
-  margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 3rem;
   border-bottom: 1px dotted #555;
   width: 100%;
 }
@@ -158,6 +159,7 @@ padding: 8px;
   letter-spacing: 1px;
   font-size: 18px;
   margin-bottom: 5px;
+  margin-left: 5px;
 }
 
 .modal-content #modalInput{
@@ -168,6 +170,7 @@ padding: 8px;
   border-color: rgba(0,0,0,0.1);
   width: 100%;
   font-size: 16PX;
+  outline: 0;
 
 }
 

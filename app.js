@@ -5,6 +5,14 @@ const modalBTNchange = document.getElementById('modalBTN')
 const mInput = document.getElementById('modalInput')
 const error = document.querySelector('.error')
 
+const locationErr = document.getElementById('location')
+const descErr = document.getElementById('weather-description')
+const imgErr = document.getElementById('img-icon')
+const tempErr = document.getElementById('temperature')
+const feelsErr = document.getElementById('feelsLike')
+const humidErr = document.getElementById('humidity')
+const windErr = document.getElementById('wind')
+
 
 const storage = new Storage();
 const weatherLocation = storage.getLocationData()
@@ -34,7 +42,13 @@ function getWeather() {
               console.log(res);
               ui.paint(res)
             })
-            .catch(err => console.log(err))
+            .catch(err => locationErr.textContent = `Oops. That city doesn't exist`)
+            descErr.textContent = '';
+            imgErr.textContent = '';
+            tempErr.textContent = '';
+            feelsErr.textContent = '';
+            humidErr.textContent = '';
+            windErr.textContent = '';
 
 }
 
