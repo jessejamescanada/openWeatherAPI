@@ -72,7 +72,7 @@ function closeModalWindow(e) {
 }
 
 function changeCity(e) {
-  city = mInput.value;
+  city = mInput.value.trim();
 
   if(mInput.value === ''){
     error.style.display = 'block'
