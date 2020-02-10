@@ -195,3 +195,9 @@ padding: 8px;
   display: none;
   color: red;
 }
+
+@media(max-width: 600px){
+  .container{
+    width: auto;
+  }
+}
