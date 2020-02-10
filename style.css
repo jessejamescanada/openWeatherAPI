@@ -200,4 +200,7 @@ padding: 8px;
   .container{
     width: auto;
   }
+  #location{
+    text-align: center;
+  }
 }
