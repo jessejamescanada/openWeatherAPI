@@ -6,7 +6,7 @@ class Forecast {
   }
 
 async getForecast() {
-  const res = await fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${this.city}&appid=${this.apiKey}&cnt=25&units=imperial`);
+  const res = await fetch(`https://api.openweathermap.org/data/2.5/forecast?q=${this.city}&appid=${this.apiKey}&cnt=25&units=imperial`);
   
   const data = await res.json();
   console.log(data);
