@@ -1,25 +1,31 @@
-*{
+* {
   box-sizing: border-box;
 }
 
-body{
+body {
   margin: 0;
-
-
+  font-family: 'Open Sans', sans-serif;
 }
 
-.container{
+.container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 60vh;
   width: 450px;
   align-items: center;
   justify-content: center;
   margin: auto;
 }
 
-.displayContainer{
-  background-image: linear-gradient(to bottom, #85b6ff, #77afff, #67a8ff, #55a2ff, #3f9bff);
+.displayContainer {
+  background-image: linear-gradient(
+    to bottom,
+    #85b6ff,
+    #77afff,
+    #67a8ff,
+    #55a2ff,
+    #3f9bff
+  );
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -28,84 +34,101 @@ body{
   padding: 25px;
   margin: 10px;
   border-radius: 5px;
-  box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,.24);
-
-
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0.24);
 }
 
-#location{
+#location {
   text-transform: capitalize;
   letter-spacing: 1px;
   color: white;
   margin: 0;
 }
 
-#weather-description{
+#weather-description {
   margin: 5px;
   text-transform: capitalize;
+  text-align: center;
 }
 
-#img-icon{
-
+#img-icon {
 }
 
-#temperature{
-margin-top: 0;
-color: white;
+#temperature {
+  margin-top: 0;
+  color: white;
 }
 
-.weatherList{
-border-radius: 5px;
-background-color: #fff;
-width: 80%;
-padding: 0;
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
+.weatherList {
+  border-radius: 5px;
+  background-color: #fff;
+  width: 80%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-
-.weather-list{
+.weather-list {
   /* display: flex;
   flex-direction: column; */
   /* justify-content: center;
   align-items: center; */
-list-style-type: none;
-border-bottom: 1px dotted #555;
-width: 100%;
-text-align: center;
-padding: 8px;
+  list-style-type: none;
+  border-bottom: 1px dotted #555;
+  width: 100%;
+  text-align: center;
+  padding: 8px;
 }
 
-.weather-list:last-child{
+.weather-list:last-child {
   border-bottom: none;
 }
 
-.btn{
+.btn {
+  cursor: pointer;
   margin: 10px;
   padding: 15px 10px;
   border-radius: 5px;
   border: none;
   font-size: 18px;
-  letter-spacing: .6px;
-  color:#fff;
-  background-color: rgba(95, 178, 255, 0.945);
-  box-shadow: 0 1px 3px rgba(0,0,0,.12), 0 1px 2px rgba(0,0,.24);
+  letter-spacing: 0.6px;
+  color: #444;
+  background-color: rgb(248, 248, 42);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0.24);
 }
 
-.btn:focus{
+.btn:focus {
   outline: 0;
   position: relative;
   animation-name: btnAnimate;
-  animation-duration: .1s;
+  animation-duration: 0.1s;
   animation-timing-function: ease-in-out;
 }
 
-@keyframes btnAnimate{
-  0% {left:0px; top:0px;}
-  50%{left: 2px; top: 2px;}
-  100%{left: 0px; top: 0px;}
+#changeLocBTN{
+  background-color:  rgb(248, 248, 42);
+  color: #444;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+#changeLocBTN:hover{
+  background-color: rgba(248, 248, 42, 0.651)
+}
+
+@keyframes btnAnimate {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  50% {
+    left: 2px;
+    top: 2px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
 }
 
 /* modal */
@@ -118,10 +141,10 @@ padding: 8px;
   height: 100%;
   width: 100%;
   overflow: auto;
-  background: rgba(0,0,0, 0.5);
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.modal-content{
+.modal-content {
   display: flex;
   flex-direction: column;
   background: #fff;
@@ -136,7 +159,7 @@ padding: 8px;
   animation-duration: 1s;
 }
 
-.modalPara{
+.modalPara {
   position: absolute;
   right: 6px;
   top: -20px;
@@ -146,14 +169,14 @@ padding: 8px;
   font-weight: 900;
 }
 
-.modal-content h1{
+.modal-content h1 {
   margin-top: 0;
   margin-bottom: 3rem;
   border-bottom: 1px dotted #555;
   width: 100%;
 }
 
-.modal-content label{
+.modal-content label {
   display: block;
   text-align: left;
   letter-spacing: 1px;
@@ -162,19 +185,18 @@ padding: 8px;
   margin-left: 5px;
 }
 
-.modal-content #modalInput{
+.modal-content #modalInput {
   display: block;
   padding: 8px;
   border: 1px solid #555;
   border-radius: 5px;
-  border-color: rgba(0,0,0,0.1);
+  border-color: rgba(0, 0, 0, 0.1);
   width: 100%;
-  font-size: 16PX;
+  font-size: 16px;
   outline: 0;
-
 }
 
-#modalBTN{
+#modalBTN {
   margin: auto;
   margin-top: 20px;
   justify-content: center;
@@ -182,8 +204,8 @@ padding: 8px;
   width: 60%;
 }
 
-@keyframes modalOpen{
-  from{
+@keyframes modalOpen {
+  from {
     opacity: 0;
   }
   to {
@@ -191,16 +213,117 @@ padding: 8px;
   }
 }
 
-.error{
+.error {
   display: none;
   color: red;
 }
 
-@media(max-width: 600px){
-  .container{
-    width: auto;
+
+
+.total5DayContainer{
+
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+align-items: center;
+background-image: linear-gradient(
+    to bottom,
+    #85b6ff,
+    #77afff,
+    #67a8ff,
+    #55a2ff,
+    #3f9bff);
+margin: auto;
+width: 75%;
+border-radius: 20px;
+padding: 10px;
+}
+
+#daysContainer{
+
+}
+
+.Day1C, .Day2C, .Day3C{
+background-color: #80b9ffea;
+padding: 15px;
+border-radius: 5px;
+
+}
+
+#fiveDate, #fiveDate2, #fiveDate3{
+  color: #fff;
+}
+
+
+#fiveDesc, #fiveDesc2, #fiveDesc3{
+  text-align: center;
+  text-transform: capitalize;
+
+}
+
+#fiveTemp, #fiveTemp2, #fiveTemp3{
+  text-align: center;
+  margin-bottom: 0;
+  color: #fff;
+
+}
+
+#fiveIcon, #fiveIcon2, #fiveIcon3{
+  display: flex;
+  margin: auto;
+
+}
+
+#fiveWind, #fiveWind2, #fiveWind3{
+text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    max-width: 100%;
   }
-  #location{
+  #location {
     text-align: center;
+  }
+  .total5DayContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    /* width: 100%; */
+  }
+  #daysContainer{
+    margin: 20px;
+  }
+  #fiveDate, #fiveDate2, #fiveDate3{
+    font-size: 22px;
+    text-align: center;
+  }
+}
+
+@media(max-width: 360px){
+  #changeLocBTN{
+    margin-bottom: 20px;
+  }
+  #weather-description{
+    text-align: center;
+  }
+}
+
+@media(max-width: 1170px){
+  .total5DayContainer{
+    display: flex;
+    flex-direction: column;
+  }
+  #daysContainer{
+    margin: 20px;
+  }
+}
+
+@media(max-width: 1280px){
+  #changeLocBTN{
+    margin-bottom: 40px;
   }
 }

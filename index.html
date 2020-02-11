@@ -1,44 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Document</title>
-</head>
-<body>
-  <div class="container">
-    <div class="displayContainer">
-      <h1 id="location">title</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    
+    <title>3 Day Weather API</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="displayContainer">
+        <h1 id="location">title</h1>
         <h3 id="weather-description">partly stormy</h3>
-        <img id="img-icon">
+        <img id="img-icon" />
         <h3 id="temperature">temper</h3>
         <ul class="weatherList" id="weatherList">
           <li class="weather-list" id="feelsLike">fdsdfsdf</li>
           <li class="weather-list" id="humidity">dsdfs</li>
           <li class="weather-list" id="wind">dfdsd</li>
         </ul>
+      </div>
+      <button class="btn" id="changeLocBTN">Change Location</button>
     </div>
-    <button class="btn" id="changeLocBTN">Change Location</button>
+  <div class="total5DayContainer">
+    <div id="daysContainer" class="Day1C">
+      <h1 id="fiveDate"></h1>
+      <h3 id="fiveDesc">TT</h3>
+      <h3 id="fiveTemp">TT</h3>
+      <img id="fiveIcon" />
+      <h3 id="fiveWind">TT</h3>
+    </div>
+    <div id="daysContainer" class="Day2C">
+      <h1 id="fiveDate2"></h1>
+      <h3 id="fiveDesc2">TT</h3>
+      <h3 id="fiveTemp2">TT</h3>
+      <img id="fiveIcon2" />
+      <h3 id="fiveWind2">TT</h3>
+    </div>
+    <div id="daysContainer" class="Day3C">
+      <h1 id="fiveDate3"></h1>
+      <h3 id="fiveDesc3">TT</h3>
+      <h3 id="fiveTemp3">TT</h3>
+      <img id="fiveIcon3" />
+      <h3 id="fiveWind3">TT</h3>
+    </div>
   </div>
 
-  <div class="modal">
-    <div id="changeLocation" class="modal-content">
-      <h1 class="changeH1">Choose Location</h1>
-      <p class="modalPara">X</p>
-      <label for="modal">City:</label>
-      <div class="error">Please enter a city</div>
-      <input type="text" id="modalInput" placeholder="Enter a city...">
-      <button class="btn" id="modalBTN">Change Location</button>
+
+
+
+    <div class="modal">
+      <div id="changeLocation" class="modal-content">
+        <h1 class="changeH1">Choose Location</h1>
+        <p class="modalPara">X</p>
+        <label for="modal">City:</label>
+        <div class="error">Please enter a city</div>
+        <input type="text" id="modalInput" placeholder="Enter a city..." />
+        <button class="btn" id="modalBTN">Change Location</button>
+      </div>
     </div>
-  </div>
-  
+    
 
-
-
-  <script src="storage.js"></script>
-  <script src="weather.js"></script>
-  <script src="UI.js"></script>
-  <script src="app.js"></script>
-</body>
+    <script src="storage.js"></script>
+    <script src="weather.js"></script>
+    <script src="5day.js"></script>
+    <script src="UI.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
