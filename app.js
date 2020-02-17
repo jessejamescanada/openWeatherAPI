@@ -20,9 +20,7 @@ const weatherLocation = storage.getLocationData();
 
 const weather = new Weather(weatherLocation.city);
 const forecast = new Forecast(weatherLocation.city)
-// const sys = new Weather('Chicago', 'illinois')
-// const wind = new Weather('Chicago', 'illinois')
-// const main = new Weather('Chicago', 'illinois')
+
 
 const ui = new UI();
 
@@ -31,7 +29,7 @@ changeBTN.addEventListener("click", showModal);
 modalX.addEventListener("click", closeModal);
 window.addEventListener("click", closeModalWindow);
 modalBTNchange.addEventListener("click", changeCity);
-
+// get weather on page load
 document.addEventListener("DOMContentLoaded", getForecast);
 
 function getWeather() {
@@ -59,9 +57,6 @@ function getWeather() {
    .catch(err => console.log(err));
        
    }
-
-
-
 
 
 // show Modal function

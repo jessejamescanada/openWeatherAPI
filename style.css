@@ -94,7 +94,7 @@ body {
   font-size: 18px;
   letter-spacing: 0.6px;
   color: #444;
-  background-color: rgb(248, 248, 42);
+  background-color: rgba(243, 136, 48, 0.521);
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0.24);
 }
 
@@ -107,13 +107,13 @@ body {
 }
 
 #changeLocBTN{
-  background-color:  rgb(248, 248, 42);
+  background-color:  rgba(243, 136, 48, 0.521);
   color: #444;
   font-weight: 700;
   margin-bottom: 0;
 }
 #changeLocBTN:hover{
-  background-color: rgba(248, 248, 42, 0.651)
+  background-color: rgba(243, 136, 48, 0.411);
 }
 
 @keyframes btnAnimate {
@@ -220,7 +220,7 @@ body {
 
 
 
-.total5DayContainer{
+.total3DayContainer{
 
 display: flex;
 flex-direction: row;
@@ -234,7 +234,7 @@ background-image: linear-gradient(
     #55a2ff,
     #3f9bff);
 margin: auto;
-width: 75%;
+width: 50%;
 border-radius: 20px;
 padding: 10px;
 }
@@ -250,32 +250,40 @@ border-radius: 5px;
 
 }
 
-#fiveDate, #fiveDate2, #fiveDate3{
+#threeDate, #threeDate2, #threeDate3{
   color: #fff;
+  text-align: center;
+  font-size: 22px;
 }
 
 
-#fiveDesc, #fiveDesc2, #fiveDesc3{
+#threeDesc, #threeDesc2, #threeDesc3{
   text-align: center;
   text-transform: capitalize;
+  font-size: 16px;
 
 }
 
-#fiveTemp, #fiveTemp2, #fiveTemp3{
+#threeTemp, #threeTemp2, #threeTemp3{
   text-align: center;
   margin-bottom: 0;
   color: #fff;
+  font-size: 16px;
 
 }
 
-#fiveIcon, #fiveIcon2, #fiveIcon3{
+#threeIcon, #threeIcon2, #threeIcon3{
   display: flex;
   margin: auto;
-
 }
 
-#fiveWind, #fiveWind2, #fiveWind3{
+#threeWind, #threeWind2, #threeWind3{
 text-align: center;
+font-size: 16px;
+}
+
+#CC{
+  color: #fff;
 }
 
 @media (max-width: 768px) {
@@ -288,16 +296,16 @@ text-align: center;
   #location {
     text-align: center;
   }
-  .total5DayContainer{
+  .total3DayContainer{
     display: flex;
     flex-direction: column;
     margin-top: 60px;
-    /* width: 100%; */
+    width: 100%;
   }
   #daysContainer{
     margin: 20px;
   }
-  #fiveDate, #fiveDate2, #fiveDate3{
+  #threeDate, #threeDate2, #threeDate3{
     font-size: 22px;
     text-align: center;
   }
@@ -305,20 +313,27 @@ text-align: center;
 
 @media(max-width: 360px){
   #changeLocBTN{
-    margin-bottom: 20px;
+    padding: 10px;
+    margin: 0;
   }
   #weather-description{
     text-align: center;
   }
+  .displayContainer{
+    margin-top: 40px;
+  }
 }
 
 @media(max-width: 1170px){
-  .total5DayContainer{
+  .total3DayContainer{
     display: flex;
     flex-direction: column;
   }
   #daysContainer{
     margin: 20px;
+  }
+  .Day1C, .Day2C, .Day3C{
+    width: 100%;
   }
 }
 
@@ -326,18 +341,9 @@ text-align: center;
   #changeLocBTN{
     margin-bottom: 40px;
   }
+  .total3DayContainer{
+    border-radius: 0;
+  }
 }
 
-@media(max-height: 800px){
-  #changeLocBTN{
-    margin-bottom: 10px;
-  }
-  .displayContainer{
-    padding: 0;
-    margin: 0;
-  }
-  .total5DayContainer{
-    margin-top: -20px;
-    padding: 0;
-  }
-}
+

@@ -1,8 +1,7 @@
 class Weather {
-  constructor(city, state) {
+  constructor(city) {
     this.apiKey = "f54198238601ec13dd56118f61a7a39b";
     this.city = city;
-    this.state = state;
   }
 
   async getWeather() {
@@ -16,8 +15,8 @@ class Weather {
   }
 
   // change location
-  changeLocation(city, state) {
+  changeLocation(city) {
     this.city = city;
-    this.state = state;
+
   }
 }
