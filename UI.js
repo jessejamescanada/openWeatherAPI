@@ -30,9 +30,9 @@ class UI {
     this.location.textContent = weather.name;
     this.weatherDesc.textContent = `Current conditions: ${weather.weather[0].description}`;
     this.humidity.textContent = `Humidity: ${weather.main.humidity}%`;
-    this.feelsLike.textContent = `Feels like: ${weather.main.feels_like} °F`;
-    this.temp.textContent = `Temperature: ${weather.main.temp} °F`;
-    this.wind.textContent = `Wind: ${weather.wind.speed} MP/H`;
+    this.feelsLike.textContent = `Feels like: ${Math.round(weather.main.feels_like)} °F`;
+    this.temp.textContent = `Temperature: ${Math.round(weather.main.temp)} °F`;
+    this.wind.textContent = `Wind: ${Math.round(weather.wind.speed)} MP/H`;
     this.img.setAttribute(
       "src",
       `http://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`
@@ -42,21 +42,21 @@ class UI {
   paint2(forecast){
     this.fiveDate.textContent = new Date(forecast.list[4].dt*1000).toDateString();
     this.fiveDesc.textContent = forecast.list[4].weather[0].description
-    this.fiveTemp.textContent = `Temperature: ${forecast.list[4].main.temp}°F`
+    this.fiveTemp.textContent = `Temperature: ${Math.round(forecast.list[4].main.temp)}°F`
     this.fiveIcon.setAttribute('src', `http://openweathermap.org/img/wn/${forecast.list[4].weather[0].icon}@2x.png`);
-    this.fiveWind.textContent = `Wind: ${forecast.list[4].wind.speed} MP/H`
+    this.fiveWind.textContent = `Wind: ${Math.round(forecast.list[4].wind.speed)} MP/H`
 
 
     this.fiveDate2.textContent = new Date(forecast.list[12].dt*1000).toDateString();
     this.fiveDesc2.textContent = forecast.list[12].weather[0].description
-    this.fiveTemp2.textContent = `Temperature: ${forecast.list[12].main.temp}°F`
+    this.fiveTemp2.textContent = `Temperature: ${Math.round(forecast.list[12].main.temp)}°F`
     this.fiveIcon2.setAttribute('src', `http://openweathermap.org/img/wn/${forecast.list[12].weather[0].icon}@2x.png`);
-    this.fiveWind2.textContent = `Wind: ${forecast.list[12].wind.speed} MP/H`
+    this.fiveWind2.textContent = `Wind: ${Math.round(forecast.list[12].wind.speed)} MP/H`
 
     this.fiveDate3.textContent = new Date(forecast.list[20].dt*1000).toDateString();
     this.fiveDesc3.textContent = forecast.list[20].weather[0].description
-    this.fiveTemp3.textContent = `Temperature: ${forecast.list[20].main.temp}°F`
+    this.fiveTemp3.textContent = `Temperature: ${Math.round(forecast.list[20].main.temp)}°F`
     this.fiveIcon3.setAttribute('src', `http://openweathermap.org/img/wn/${forecast.list[20].weather[0].icon}@2x.png`);
-    this.fiveWind3.textContent = `Wind: ${forecast.list[20].wind.speed} MP/H`
+    this.fiveWind3.textContent = `Wind: ${Math.round(forecast.list[20].wind.speed)} MP/H`
   }
 }
