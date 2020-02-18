@@ -32,6 +32,15 @@ modalBTNchange.addEventListener("click", changeCity);
 // get weather on page load
 document.addEventListener("DOMContentLoaded", getForecast);
 
+// Enter key to change location on modal
+mInput.addEventListener('keypress', function(e){
+  if(e.key === 'Enter'){
+    changeCity(e);
+    modal.style.display = 'none'
+  }
+})
+
+
 function getWeather() {
   weather
     .getWeather()

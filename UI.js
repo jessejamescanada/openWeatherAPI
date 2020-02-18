@@ -43,20 +43,20 @@ class UI {
   paint2(forecast){
     this.threeDate.textContent = new Date(forecast.list[4].dt*1000).toDateString();
     this.threeDesc.textContent = forecast.list[4].weather[0].description
-    this.threeTemp.textContent = `Temperature: ${Math.round(forecast.list[4].main.temp)}°F`
+    this.threeTemp.textContent = `${Math.round(forecast.list[4].main.temp)}°F`
     this.threeIcon.setAttribute('src', `http://openweathermap.org/img/wn/${forecast.list[4].weather[0].icon}@2x.png`);
     this.threeWind.textContent = `Wind: ${Math.round(forecast.list[4].wind.speed)} MP/H`
 
 
     this.threeDate2.textContent = new Date(forecast.list[12].dt*1000).toDateString();
     this.threeDesc2.textContent = forecast.list[12].weather[0].description
-    this.threeTemp2.textContent = `Temperature: ${Math.round(forecast.list[12].main.temp)}°F`
+    this.threeTemp2.textContent = ` ${Math.round(forecast.list[12].main.temp)}°F`
     this.threeIcon2.setAttribute('src', `http://openweathermap.org/img/wn/${forecast.list[12].weather[0].icon}@2x.png`);
     this.threeWind2.textContent = `Wind: ${Math.round(forecast.list[12].wind.speed)} MP/H`
 
     this.threeDate3.textContent = new Date(forecast.list[20].dt*1000).toDateString();
     this.threeDesc3.textContent = forecast.list[20].weather[0].description
-    this.threeTemp3.textContent = `Temperature: ${Math.round(forecast.list[20].main.temp)}°F`
+    this.threeTemp3.textContent = `${Math.round(forecast.list[20].main.temp)}°F`
     this.threeIcon3.setAttribute('src', `http://openweathermap.org/img/wn/${forecast.list[20].weather[0].icon}@2x.png`);
     this.threeWind3.textContent = `Wind: ${Math.round(forecast.list[20].wind.speed)} MP/H`
   }
